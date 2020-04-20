@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<title>Abonnez-vous à notre newsletter</title>
+</head>
+<body>
+	<header>
+		
+	</header>
+	<main>
+		<h1>Abonnez-vous à notre newsletter</h1>
+			<form id=inscriptionForm method="post" action="index.php" autocomplete="off">
+
+				<label class="label" for="firstName">Prénom</label>
+				<input type="text" name="firstName" id="firstName">
+				<span id="firstNameError" class="error hidden">Veuillez saissir votre prénom</span>
+
+				<label class="label" for="lastName">Nom</label>
+				<input type="text" name="lastName" id="lastName">
+				<span id="lastNameError" class="error hidden">Veuillez saissir votre nom de famille</span>
+
+				<label class="label">Sexe</label>
+				<fieldset>
+					<label for="male">Homme</label>
+					<input type="radio" id="male" name="gender" value="M" checked>
+					<label for="female">Femme</label>
+					<input type="radio" id="female" name="gender" value="F">
+				</fieldset>
+
+				<label class="label" for="email">Email</label>
+				<input type="text" name="email" id="email">
+				<span id="emailError" class="error hidden">Error</span>
+
+				<label class="label" for="birthDate">Date de Naissance</label>
+				<input type="date" name="birthDate" id="birthDate">
+				<span id="birthDateError" class="error hidden">Error</span>
+
+				<label class="label" for="'phone">Téléphone</label>
+				<input type="text" name="phone" id="phone" placeholder="0XXXXXXXXX">
+				<span id="phoneError" class="error hidden">Veuillez saissir votre numéro de téléphone</span>
+
+				<label class="label" for="country">Pays</label>
+				<input type="text" name="country" id="country">
+				<span id="countryError" class="error hidden">Veuillez saissir votre pays</span>
+
+				<label class="label" for="question">Question à poser</label>
+				<textarea name="question" id="question" rows="3" placeholder="15 caractères au minimum"></textarea>
+				<span id="questionError" class="error hidden">Veuillez saissir votre question</span>
+
+				<div id="buttonSection">
+					<input type="submit" id="submit" class="button" value="S'inscrire"></input>
+				</div>
+				<p>
+					<?php if(isset($message)) echo $message; ?>
+				</p>
+
+		</form>
+	</main>
+	<footer>
+		
+	</footer>
+	<script type="text/javascript" src="js/validate_form.js"></script>
+</body>
+</html>

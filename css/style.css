@@ -1,0 +1,99 @@
+html {
+	font-size: 62.5%;
+	background-color: lightblue;
+	height: 100%;
+}
+* {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+	outline: none;
+}
+body {
+	font-size: 1.6rem;
+	min-width: 600px;
+	max-width: 800px;
+	min-height: 100%;
+	margin: 0 auto;
+	padding: 15px 60px;
+	font-family: 'Calibri';
+	background-color: rgb(31, 83, 140);
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 50px;
+	text-shadow: 1px 1px 10px lightblue;
+}
+form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+fieldset {
+	flex-basis: 70%;
+	border: none;
+	margin: 0 0 10px;
+	padding: 0 0 13px;
+}
+.label {
+	flex-basis: 30%;
+	margin-top: 10px;
+	color: lightyellow;
+    text-shadow: 2px 2px black;
+}
+fieldset label {
+	color: lightyellow;
+    text-shadow: 2px 2px black;
+}
+fieldset input {
+	margin-left: 5px;
+	margin-right: 20px;
+}
+input, textarea {
+	padding-left: 5px;
+	flex-basis: 70%;
+	margin-top: 10px;
+	border: 1px solid black;
+	border-radius: 6px;
+}
+.error {
+	width: 100%;
+	color: lightcoral;
+}
+.hidden {
+	visibility: hidden;
+}
+#buttonSection {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-basis: 100%;
+}
+#buttonSection input {
+	font-weight: bold;
+	flex-basis: auto;
+	padding: 5px 15px;	
+}
+#buttonSection input:hover {
+	/*background-color: lightblue;
+	border: 1px solid white;*/
+	border: none;
+	box-shadow:
+		0 0 2px rgba(202,228,225,0.92),
+		0 0 10px rgba(202,228,225,0.34),
+		0 0 4px rgba(30,132,242,0.52),
+		0 0 7px rgba(30,132,242,0.92),
+		0 0 11px rgba(30,132,242,0.78),
+		0 0 16px rgba(30,132,242,0.92);
+}
+textarea {
+	resize: none;
+}
+span {
+	margin-top: 5px;
+}
+p {
+	text-align: center;
+	color: lightcoral;
+	width: 100%;
+}
