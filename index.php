@@ -1,10 +1,14 @@
 <?php
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+
 try
 {
-    $bdd = new PDO("mysql:host=localhost; charset=UTF8",
-				   "root",
-				   "",
+    $bdd = new PDO("mysql:host=$servername; charset=UTF8",
+				   $username,
+				   $password,
 				   [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 					PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 				   ]
@@ -13,9 +17,9 @@ try
     $bdd->exec($sql);
 } catch(PDOException $e) {}
 
-$bdd = new PDO("mysql:host=localhost; dbname=GPBL; charset=UTF8",
-			   "root",
-			   "",
+$bdd = new PDO("mysql:host=$servername; dbname=GPBL; charset=UTF8",
+			   $username,
+			   $password,
 			   [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 				PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
 			   ]
